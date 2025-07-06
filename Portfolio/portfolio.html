@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Samer AlMaqadas - Portfolio</title>
+
+<style>
+/* General Reset and Theme */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f3fc;
+  color: #4b0082;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #6a0dad;
+  padding: 15px;
+  z-index: 999;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.navbar li {
+  display: inline;
+  margin: 0 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+  color: #ffddff;
+}
+
+/* Video Section */
+.video-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+}
+
+.video-section video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background: rgba(106, 13, 173, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* About Section */
+.about-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px;
+  gap: 20px;
+}
+
+.column {
+  width: 45%;
+  height: auto;
+  color: #4b0082;
+}
+
+/* Image Styling */
+.profile-img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 300px;
+  filter: grayscale(30%) contrast(120%);
+  border-radius: 20px;
+}
+
+/* Hover Effect on <p> */
+.hover-me:hover {
+  background-color: #dab6ff;
+  padding: 10px;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+/* Image Overlay Fade */
+.image-overlay-container {
+  position: relative;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.image-overlay-container img {
+  width: 50%;
+  height: auto;
+  opacity: 0.85;
+  transition: 0.5s;
+  border-radius: 10px;
+}
+.image-overlay-container img:hover {
+opacity:0.6;
+}
+
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background: rgba(75, 0, 130, 0.6);
+  padding: 10px 20px;
+  border-radius: 5px;
+cursor:pointer;
+}
+
+/* Table Styling */
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: white;
+  color: #4b0082;
+  font-weight: 500;
+}
+
+th, td {
+  border: 1px solid #6a0dad;
+  padding: 10px 15px;
+  text-align: center;
+}
+
+thead {
+  background-color: #d3a7f9;
+}
+
+/* Footer */
+footer {
+  background-color: #6a0dad;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-weight: bold;
+}
+
+</style>
+
+</head>
+<body>
+
+<!-- Fixed Navbar -->
+<nav class="navbar">
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+  </ul>
+</nav>
+
+<!-- Home Section with Video Background -->
+<section id="home" class="video-section">
+  <video autoplay muted loop>
+    <source src="https://cdn.pixabay.com/video/2022/09/18/131735-751029898_tiny.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="video-text">
+    <h1>Welcome to Samer's Portfolio</h1>
+    <p>Student | Developer | Creator</p>
+  </div>
+</section>
+
+<!-- About Section with Image and Overlay -->
+<section id="about">
+  <h2>About Samer</h2>
+  <div class="about-container">
+    <div class="column">
+      <img src="https://cdn.pixabay.com/photo/2023/09/17/22/25/witch-8259351_1280.jpg" alt="Samer" class="profile-img" />
+    </div>
+    <div class="column">
+      <p>Hello! I'm Samer AlMaqadas, a student passionate about web development and design. This site showcases my projects and skills using modern HTML and CSS.</p>
+    </div>
+  </div>
+
+  <!-- Hoverable Paragraph -->
+  <p class="hover-me">Hover over this text to see a cool effect!</p>
+
+  <!-- Image Overlay -->
+  <div class="image-overlay-container">
+    <img src="https://cdn.pixabay.com/photo/2024/08/15/10/02/lightning-8970716_1280.jpg" alt="Overlay Image">
+    <div class="overlay-text">Overlay Text on Image</div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects">
+  <h2>My Projects</h2>
+
+  <!-- Table -->
+  <table>
+    <thead>
+      <tr>
+        <th>Project</th>
+        <th>Type</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Bootstrap Website</td>
+        <td>Web</td>
+        <td>Completed</td>
+      </tr>
+      <tr>
+        <td>Portfolio</td>
+        <td>Web</td>
+        <td>In Progress</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Samer AlMaqadas | All rights reserved.</p>
+</footer>
+
+</body>
+</html>
